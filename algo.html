@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .algorithm {
+            margin-bottom: 30px;
+        }
+
+        .algorithm h2 {
+            color: #555;
+        }
+
+        .algorithm p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #333;
+            background: #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-link a:hover {
+            background-color: #d5d5d5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorting Algorithms</h1>
+
+        <div class="algorithm">
+            <h2>Bubble Sort</h2>
+            <p>
+                Bubble Sort is a basic comparison-based algorithm that works by repeatedly swapping adjacent elements that are out of order. While easy to understand, it is highly inefficient for large datasets.
+            </p>
+            <p>
+                <ul>
+                    <li>We sort the array using multiple passes. After the first pass, the maximum element goes to end (its correct position). Same way, after second pass, the second largest element goes to second last position and so on.</li>
+                    <li>In every pass, we process only those elements that have already not moved to correct position. After k passes, the largest k elements must have been moved to the last k positions.</li>
+                    <li>In a pass, we consider remaining elements and compare all adjacent and swap if larger element is before a smaller element. If we keep doing this, we get the largest (among the remaining elements) at its correct position.</li>
+                </ul>
+            </p>
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+                <li>Best Case (already sorted): <code>O(n)</code></li>
+                <li>Average Case: <code>O(n²)</code></li>
+                <li>Worst Case: <code>O(n²)</code></li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(1)</code> (in-place)</p>
+            <p><strong>Use Cases:</strong> Suitable for small datasets or when simplicity is a priority.</p>
+        </div>
+
+        <div class="algorithm">
+            <h2>Quick Sort</h2>
+            <p>
+                Quick Sort is a highly efficient divide-and-conquer algorithm. It selects a "pivot" element, partitions the array into elements less than the pivot and elements greater than the pivot, and recursively applies the process to subarrays.
+            </p>
+            <p>
+                <ul>
+                    <li><b>Choose a Pivot:</b> Select an element from the array as the pivot. The choice of pivot can vary (e.g., first element, last element, random element, or median).</li>
+                    <li><b>Partition the Array:</b> Rearrange the array around the pivot. After partitioning, all elements smaller than the pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then in its correct position, and we obtain the index of the pivot.</li>
+                    <li><b>Recursively Call:</b> Recursively apply the same process to the two partitioned sub-arrays (left and right of the pivot).</li>
+                    <li><b>Base Case:</b> The recursion stops when there is only one element left in the sub-array, as a single element is already sorted.</li>
+                </ul>
+            </p>
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+                <li>Best Case: <code>O(n log n)</code></li>
+                <li>Average Case: <code>O(n log n)</code></li>
+                <li>Worst Case (poor pivot selection): <code>O(n²)</code></li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(log n)</code> (due to recursion)</p>
+            <p><strong>Use Cases:</strong> Best for large datasets; often faster in practice compared to other algorithms like Merge Sort.</p>
+        </div>
+
+        <div class="algorithm">
+            <h2>Merge Sort</h2>
+            <p>
+                Merge Sort is a stable, divide-and-conquer algorithm that splits the array into halves, recursively sorts them, and merges the sorted halves. It is reliable and works well with large datasets.
+            </p>
+            <p>
+                <ul>
+                    <li><b>Divide:</b> Divide the list or array recursively into two halves until it can no more be divided.</li>
+                    <li><b>Conquer:</b> Each subarray is sorted individually using the merge sort algorithm.</li>
+                    <li><b>Merge:</b> The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged.</li>
+                </ul>
+            </p>
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+                <li>Best Case: <code>O(n log n)</code></li>
+                <li>Average Case: <code>O(n log n)</code></li>
+                <li>Worst Case: <code>O(n log n)</code></li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(n)</code> (requires additional memory for merging)</p>
+            <p><strong>Use Cases:</strong> Useful for sorting linked lists or datasets too large to fit in memory.</p>
+        </div>
+
+        <div class="algorithm">
+            <h2>Selection Sort</h2>
+            <p>
+                Selection Sort divides the array into sorted and unsorted parts. It repeatedly finds the smallest element in the unsorted part and swaps it with the first unsorted element.
+            </p>
+            <p>
+                <ul>
+                    <li>First we find the smallest element and swap it with the first element. This way we get the smallest element at its correct position.</li>
+                    <li>Then we find the smallest among remaining elements (or second smallest) and swap it with the second element.</li>
+                    <li>We keep doing this until we get all elements moved to correct position.</li>
+                </ul>
+            </p>
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+                <li>Best Case: <code>O(n²)</code></li>
+                <li>Average Case: <code>O(n²)</code></li>
+                <li>Worst Case: <code>O(n²)</code></li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(1)</code> (in-place)</p>
+            <p><strong>Use Cases:</strong> Rarely used in practice but helpful for small datasets or educational purposes.</p>
+        </div>
+
+        <div class="algorithm">
+            <h2>Insertion Sort</h2>
+            <p>
+                Insertion Sort builds the sorted portion of the array one element at a time by comparing each new element to those in the sorted portion and inserting it at the correct position.
+            </p>
+            <p>
+                <ul>
+                    <li>We start with second element of the array as first element in the array is assumed to be sorted.</li>
+                    <li>Compare second element with the first element and check if the second element is smaller then swap them.</li>
+                    <li>Move to the third element and compare it with the first two elements and put at its correct position.</li>
+                    <li>Repeat until the entire array is sorted.</li>
+                </ul>
+            </p>
+            <p><strong>Time Complexity:</strong></p>
+            <ul>
+                <li>Best Case (nearly sorted): <code>O(n)</code></li>
+                <li>Average Case: <code>O(n²)</code></li>
+                <li>Worst Case: <code>O(n²)</code></li>
+            </ul>
+            <p><strong>Space Complexity:</strong> <code>O(1)</code> (in-place)</p>
+            <p><strong>Use Cases:</strong> Works well for small datasets or nearly sorted arrays.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

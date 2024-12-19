@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #333;
+            background: #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-link a:hover {
+            background-color: #d5d5d5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comparison of Sorting Algorithms</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Stability</th>
+                    <th>In-place</th>
+                    <th>Recursive</th>
+                    <th>Adaptable</th>
+                    <th>Best Applications</th>
+                    <th>Additional Advantages</th>
+                    <th>Additional Disadvantages</th>
+                    <th>Strengths</th>
+                    <th>Weaknesses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Bubble Sort</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Teaching purposes, small datasets</td>
+                    <td>Very easy to understand</td>
+                    <td>Inefficient for even moderately large datasets</td>
+                    <td>Simple to implement</td>
+                    <td>Not practical for large datasets</td>
+                </tr>
+                <tr>
+                    <th>Quick Sort</th>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Large datasets, when memory is limited</td>
+                    <td>Fast on average and uses less memory than Merge Sort</td>
+                    <td>Not stable; poor pivot choice affects performance</td>
+                    <td>Efficient for large datasets</td>
+                    <td>Performance can degrade with poor pivot selection</td>
+                </tr>
+                <tr>
+                    <th>Merge Sort</th>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>External sorting, large datasets</td>
+                    <td>Stable; predictable performance</td>
+                    <td>Consumes significant memory for merging</td>
+                    <td>Stable and reliable</td>
+                    <td>Higher memory usage due to auxiliary space</td>
+                </tr>
+                <tr>
+                    <th>Selection Sort</th>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Small datasets, where memory is extremely constrained</td>
+                    <td>Memory-efficient</td>
+                    <td>Slow and inefficient for large datasets</td>
+                    <td>Memory efficient, easy to implement</td>
+                    <td>Highly inefficient on large data sets</td>
+                </tr>
+                <tr>
+                    <th>Insertion Sort</th>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Nearly sorted or small datasets</td>
+                    <td>Fast for small or nearly sorted datasets</td>
+                    <td>Not suitable for large datasets</td>
+                    <td>Efficient for small or nearly sorted datasets</td>
+                    <td>Slow for large, unsorted datasets</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="note">
+            <strong>Note:</strong> "Adaptable" refers to algorithms that adjust their behavior based on the initial order of elements, performing better on nearly sorted arrays. 
+            "In-place" refers to whether the algorithm requires additional memory outside of the input array (or list) to perform the sorting.
+        </p>
+
+        <div class="back-link">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+</body>
+</htm
